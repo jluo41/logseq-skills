@@ -53,9 +53,9 @@ Dynamic variables use `<% variable %>` syntax. They resolve to actual values at 
 
 | Variable | Syntax | Resolves To |
 |----------|--------|-------------|
-| Today | `<% today %>` | `[[Jan 15th, 2025]]` (today's journal link) |
-| Yesterday | `<% yesterday %>` | `[[Jan 14th, 2025]]` |
-| Tomorrow | `<% tomorrow %>` | `[[Jan 16th, 2025]]` |
+| Today | `<% today %>` | `[[2025-01-15]]` (today's journal link, format depends on config) |
+| Yesterday | `<% yesterday %>` | `[[2025-01-14]]` |
+| Tomorrow | `<% tomorrow %>` | `[[2025-01-16]]` |
 | Current time | `<% time %>` | `22:44` (HH:MM format) |
 | Current page | `<% current page %>` | `[[Current Page Name]]` |
 

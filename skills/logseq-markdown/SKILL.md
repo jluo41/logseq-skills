@@ -22,7 +22,9 @@ Every line in a LogSeq markdown file is a block, prefixed with `- `:
 - Use **tabs** (not spaces) for indentation in LogSeq markdown files
 - Every block gets a unique UUID automatically assigned by LogSeq
 - Pages are root-level containers; every block belongs to a page
-- Journal pages use date-based filenames (e.g., `2025_01_15.md`)
+- Journal pages use date-based filenames (e.g., `2026_02_12.md`)
+- Date links use ISO format: `[[2026-02-12]]` (configured via `:journal/page-title-format "yyyy-MM-dd"`)
+- Page files go in `pages/` directory, journal files in `journals/` directory
 
 ## Text Formatting
 
