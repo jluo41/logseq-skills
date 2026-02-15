@@ -25,6 +25,26 @@
 
 Copy the `skills/` directory and `.claude-plugin/` to your project's `.claude/` folder, or to `~/.claude/` for global access.
 
+### OpenClaw (global install, recommended)
+
+OpenClaw loads skills from `~/.openclaw/skills` (managed/global) and `<workspace>/skills` (workspace-specific).
+
+**Symlink install (auto-updates when you `git pull` this repo):**
+
+```bash
+mkdir -p ~/.openclaw/skills
+ln -s /path/to/logseq-skills/skills/logseq-markdown   ~/.openclaw/skills/logseq-markdown
+ln -s /path/to/logseq-skills/skills/logseq-queries    ~/.openclaw/skills/logseq-queries
+ln -s /path/to/logseq-skills/skills/logseq-templates  ~/.openclaw/skills/logseq-templates
+ln -s /path/to/logseq-skills/skills/logseq-whiteboards ~/.openclaw/skills/logseq-whiteboards
+ln -s /path/to/logseq-skills/skills/logseq-cc-records ~/.openclaw/skills/logseq-cc-records
+
+openclaw skills list
+openclaw skills check
+```
+
+Tip: for `logseq-cc-records`, set `LOGSEQ_GRAPH_DIR` to your graph folder so the logger writes to the right `journals/`.
+
 ## License
 
 MIT

@@ -5,10 +5,16 @@ description: Log the current Claude Code conversation to today's LogSeq journal 
 
 # LogSeq CC Records
 
-Log the current Claude Code conversation or work session to today's LogSeq journal with a time-stamped, concise summary.
+Log the current Claude Code / OpenClaw work session to today's LogSeq journal with a time-stamped, concise summary.
 
 **Method**: Direct markdown file editing (more reliable than MCP for nested structure)
-**Location**: `~/Desktop/LogSeq-Me/journals/`
+
+**Location (configurable)**
+- Set `LOGSEQ_GRAPH_DIR` to your LogSeq graph folder (the one that contains `journals/`, `pages/`, `logseq/`).
+- Journals path: `$LOGSEQ_GRAPH_DIR/journals/`
+
+**Example (OpenClaw + jluo41-repo default)**
+- `LOGSEQ_GRAPH_DIR=/home/jluo41/.openclaw/workspace/jluo41-repo/3-Chronile/LogSeq-Me`
 
 ## Entry Format
 
@@ -54,7 +60,8 @@ All entries are written under the `[[CC-Veritable-Records]]` section with **time
 
 1. Get today's date in YYYY_MM_DD format (LogSeq uses underscores in filenames)
 2. Get current time in HH:MM format (24-hour)
-3. Read the LogSeq journal markdown file: `~/Desktop/LogSeq-Me/journals/{date}.md`
+3. Resolve journal path: `$LOGSEQ_GRAPH_DIR/journals/{date}.md`
+   - If `LOGSEQ_GRAPH_DIR` is not set, fall back to `~/Desktop/LogSeq-Me` (legacy default).
 4. **Check if `[[CC-Veritable-Records]]` section exists** in the file
 5. Analyze the conversation context to identify:
    - Main topic/project
